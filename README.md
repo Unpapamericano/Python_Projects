@@ -1,45 +1,40 @@
-# Python_Projects
-# Ranked-Choice Voting using the Tideman Method
+# Welcome to Remix!
 
-This is a C program for conducting ranked-choice voting elections based on the Tideman method. It allows you to calculate the winner of an election, taking into account voter preferences and ensuring that the elected candidate has majority support.
+- 📖 [Remix docs](https://remix.run/docs)
 
-## Table of Contents
+## Development
 
-- [Introduction](#introduction)
-- [How to Use](#how-to-use)
-- [File Structure](#file-structure)
-- [Function Descriptions](#function-descriptions)
+Run the dev server:
 
-## Introduction
+```shellscript
+npm run dev
+```
 
-Ranked-choice voting is a fair and inclusive method of conducting elections. This program calculates the winner by following these steps:
-1. Collecting and recording voter preferences.
-2. Determining pairs of candidates where one is preferred over the other.
-3. Sorting the pairs by the strength of victory.
-4. Locking pairs into the candidate graph to prevent cycles.
-5. Printing the winner of the election.
+## Deployment
 
-## How to Use
+First, build your app for production:
 
-To use this program, follow these steps:
+```sh
+npm run build
+```
 
-1. "Compile the program using a C compiler (e.g., `gcc tideman.c -o tideman`)."
-2. Run the compiled program, passing the list of candidates as command-line arguments (e.g., `./tideman candidate1 candidate2 candidate3`).
-3. Enter the number of voters and their ranked preferences when prompted.
-4. The program will calculate the winner and display the result.
+Then run the app in production mode:
 
-## File Structure
+```sh
+npm start
+```
 
-- `tideman.c`: The main source code file containing the program's logic.
-- `cs50.h`: A library for handling user input (included in the program).
-- `stdio.h`: A standard input/output library (included in the program).
-- Other header files and function implementations for sorting and checking cycles.
+Now you'll need to pick a host to deploy it to.
 
-## Function Descriptions
+### DIY
 
-Here are some key functions in the code:
+If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
 
-- `vote(int rank, string name, int ranks[])`: Updates voter ranks based on their preferences.
-- `record_preferences(int ranks[])`: Records voter preferences and updates the `preferences` array.
-- `add_pairs()`: Records pairs of candidates where one is preferred over the other.
-- `sort_pairs()`: Sort
+Make sure to deploy the output of `npm run build`
+
+- `build/server`
+- `build/client`
+
+## Styling
+
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
